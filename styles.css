@@ -1,0 +1,28 @@
+body {
+    font-family: Helvetica;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+/*entire header contents */
+.page-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+/* selects the ul from the nav */
+.page-header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* selects the links <a> tags */
+.page-header a{
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+}
