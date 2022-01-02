@@ -1,5 +1,7 @@
+@import url('./fonts/font.css');
+
 body {
-    font-family: Helvetica;
+    font-family: 'WorkSans';
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
@@ -9,9 +11,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: bisque;
+    background: linear-gradient(45deg,rgb(157, 221, 213) 30%, rgb(196, 141, 241));
 }
 
+/*selects title */
+.page-header h4{
+    font-family: "Syne";
+    font-variation-settings: 'wght' 800;
+}
 /* selects the ul from the nav */
 .page-header ul {
     list-style: none;
