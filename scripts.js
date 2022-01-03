@@ -4,6 +4,7 @@ const itemsContainer = document.getElementById('items');
 itemsContainer.classList.add('flex')
 
 data.forEach(function(data, image){
+    //print to console the number of items in the array I'll be working with
     console.log(data.length)
     //create a div where each image will go into
     const newDiv = document.createElement('div')
@@ -14,6 +15,8 @@ data.forEach(function(data, image){
     image = document.createElement('img')
     image.src = data.image
     image.classList.add('contain')
+    //print to console the image element created
+    //console.log(image)
 
     //append the image to the div
     newDiv.appendChild(image)
