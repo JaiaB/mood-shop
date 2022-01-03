@@ -12,6 +12,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     background: linear-gradient(45deg,rgb(157, 221, 213) 30%, rgb(196, 141, 241));
+    border-bottom:rgb(16, 12, 21) 2px solid;
 }
 
 /*selects title */
@@ -33,4 +34,33 @@ body {
     padding: 0.5em;
     text-decoration: none;
     color: rgb(16, 12, 21);
+}
+
+/* CLASSESS DYNAMICALLY ADDED */
+
+/* styles the size of the gifs */
+.contain {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+}
+
+/* styles itemsContainer */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+    background: rgba(208, 210, 255, 0.851);
+}
+
+/*styles newDiv */
+.margins{
+    margin: 30px;
+    border-radius: 6px;
+    border: 3px solid rgb(16, 12, 21);
+    width: 300px;
+    height: 300px;
 }
