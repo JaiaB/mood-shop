@@ -19,15 +19,26 @@ data.forEach(function(data, image){
     //console.log(image)
 
     const description = document.createElement('p')
-    //console.log(description)
-    description.textContent = data.desc
+    description.innerText = data.desc
     description.classList.add('paragraph')
+    //console.log(description)
 
 
     const price = document.createElement('p')
-    //console.log(price)
     price.innerText = data.price
     price.classList.add('paragraph')
+    //console.log(price)
+
+    const addCartBtn = document.createElement('button')
+
+    //assign the button id to the name property
+    addCartBtn.id = data.name
+    //add the text to the button
+    addCartBtn.textContent = "Add to Cart"
+    //store the price value inside the button
+    addCartBtn.dataset.price = data.price
+    //console.log(addCartBtn)
+    
 
     //append the image to the div
     newDiv.appendChild(image)
@@ -35,6 +46,8 @@ data.forEach(function(data, image){
     newDiv.appendChild(description)
     //append price
     newDiv.appendChild(price)
+    //append button
+    newDiv.appendChild(addCartBtn)
     
     //append all elements (new divs) to the html container variable so they are displayed in the dom
     itemsContainer.appendChild(newDiv)
