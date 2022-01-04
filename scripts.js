@@ -1,32 +1,25 @@
 import data from './data.js';
 const itemsContainer = document.getElementById('items');
 
-itemsContainer.classList.add('flex')
-
 data.forEach(function(data, image){
     //print to console the number of items in the array I'll be working with
     //console.log(data.length)
     //create a div where each image will go into
     const newDiv = document.createElement('div')
     newDiv.className = 'item'
-    newDiv.classList.add('margins')
 
     //create an image element (using the image parameter) so that later we can assign the src attribute and dimensions to each
     image = document.createElement('img')
     image.src = data.image
-    image.classList.add('contain')
     //print to console the image element created
     //console.log(image)
 
     const description = document.createElement('p')
     description.innerText = data.desc
-    description.classList.add('paragraph')
     //console.log(description)
-
 
     const price = document.createElement('p')
     price.innerText = data.price
-    price.classList.add('paragraph')
     //console.log(price)
 
     const addCartBtn = document.createElement('button')
