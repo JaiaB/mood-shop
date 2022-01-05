@@ -1,16 +1,16 @@
 import data from './data.js';
 const itemsContainer = document.getElementById('items');
 
-data.forEach(function(data, image){
+data.forEach(function(data){
     //print to console the number of items in the array I'll be working with
     //console.log(data.length)
     //create a div where each image will go into
-    const newDiv = document.createElement('div')
-    newDiv.className = 'item'
+    const item = document.createElement('div')
+    item.className = 'item'
 
     //create an image element (using the image parameter) so that later we can assign the src attribute and dimensions to each
-    image = document.createElement('img')
-    image.src = data.image
+    const imageEl = document.createElement('img')
+    imageEl.src = data.image
     //print to console the image element created
     //console.log(image)
 
@@ -32,17 +32,15 @@ data.forEach(function(data, image){
     addCartBtn.dataset.price = data.price
     //console.log(addCartBtn)
     
-
     //append the image to the div
-    newDiv.appendChild(image)
+    item.appendChild(imageEl)
     //append image description
-    newDiv.appendChild(description)
+    item.appendChild(description)
     //append price
-    newDiv.appendChild(price)
+    item.appendChild(price)
     //append button
-    newDiv.appendChild(addCartBtn)
+    item.appendChild(addCartBtn)
     
     //append all elements (new divs) to the html container variable so they are displayed in the dom
-    itemsContainer.appendChild(newDiv)
+    itemsContainer.appendChild(item)
 })
-
