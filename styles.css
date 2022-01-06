@@ -9,6 +9,7 @@ body {
 }
 /*entire header contents */
 .page-header{
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,21 +21,23 @@ body {
 .page-header h4{
     font-family: "Syne";
     font-variation-settings: 'wght' 800;
-}
-/* selects the ul from the nav */
-.page-header ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin-left: 40px;
 }
 
-/* selects the links <a> tags */
-.page-header a{
+/* selects nav element */
+.page-header-nav{
+   margin-right: 40px;
+}
+
+/* selects nav links within */
+.page-header-links {
+    color: rgb(16, 12, 21);
     display: block;
     padding: 0.5em;
-    text-decoration: none;
-    color: rgb(16, 12, 21);
+}
+
+.page-header-links:hover{
+    cursor: pointer;
 }
 
 /* styles items class */
@@ -117,4 +120,47 @@ body {
     transform:scale(0.9);
     background-color: rgb(116, 87, 221);
     color:rgba(208, 210, 255, 0.933);
+}
+
+/* shopping cart */
+.shopping-cart--active{
+    height: 100vh;
+    width: 30%;
+    border: 3px solid rgb(16, 12, 21);
+    background: rgb(93, 70, 199);
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all ease-in-out 0.6s;
+}
+
+.shopping-cart{
+    opacity: 0;
+    z-index: 0;
+}
+
+.close-button{
+    /* changing position makes the button display or not */
+    margin: 6px;
+    display: block;
+    float: right;
+    font-family: 'syne';
+    font-size: large;
+    font-variation-settings: 'wght' 800;
+    background: rgba(208, 210, 255, 0.933);
+    color: rgba(21, 11, 33, 0.768);
+    border-style: none;
+    border-radius: 2px;
+    z-index: 0;
+}
+
+.close-button:hover{
+    cursor: pointer;
 }
