@@ -40,16 +40,13 @@ data.forEach(function(data){
     addItem()
   })
 
-  //append the image to the div
+  //append elements to the div to make card
   item.appendChild(imageEl)
-  //append image description
   item.appendChild(description)
-  //append price
   item.appendChild(price)
-  //append button
   item.appendChild(button)
     
-  //append all elements (new divs) to the html container variable so they are displayed in the dom
+  //append all cards to the html container so they are displayed in the dom
   itemsContainer.appendChild(item)
 })
 
